@@ -3,7 +3,7 @@ import getpass
 import pandas as pd
 
 from scraping import get_team_soups, get_player_soup, get_player_stats
-from fantacalcio.config_data.config_data import FOLDER_FANTA_INPUT
+from fantacalcio.config_data.config_data import FOLDER_FANTA_INPUT, FANTA_GRADES_FN
 
 
 # INPUTS
@@ -15,7 +15,7 @@ PAGES_GRADES = {'2014':"http://www.gazzetta.it/calcio/fantanews/voti/serie-a-201
 N_GIORNATE = 38
 INDICES=['V', 'G', 'A', 'R', 'RS', 'AG', 'AM', 'ES', 'FV']
 OUTPUT_FOLDER = FOLDER_FANTA_INPUT[getpass.getuser()]
-OUTPUT_FN = "fanta_grades.csv"
+
 
 
 # FUNCTIONS
@@ -42,7 +42,7 @@ def main():
         season_stats['Season'] = season
         all_stats = pd.concat([all_stats, season_stats])
     all_stats = all_stats.set_index(['Season', 'Giornata', 'Team', 'Player'])
-    all_stats.to_csv(os.path.join(OUTPUT_FOLDER, OUTPUT_FN))
+    all_stats.to_csv(os.path.join(OUTPUT_FOLDER, FANTA_GRADES_FN))
 
 if __name__ == '__main__':
     main()
