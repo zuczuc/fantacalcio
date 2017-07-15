@@ -40,4 +40,9 @@ def get_player_stats(player_soup, indices=INDICES):
     stats = pd.Series(data=[clean_table_cells(div.string)
             for div in player_soup.find_all('div') if div.get('class', None)[0] == "inParameter"],
       index=indices)
+    player_in = [sp for sp in player_soup.find_all('span') if sp.get('class',None)==['playerStats', 'icon', 'down']]
+    player_out = [sp for sp in player_soup.find_all('span') if sp.get('class',None)==['playerStats', 'icon', 'up']]
+    pi = 1 if len(player_in)>0 else 0
+    po = 1 if len(player_out)>0 else 0
+    stats = stats.append(pd.Series(index=['In', 'Out'], data = [pi, po]))
     return player_name, role, stats
