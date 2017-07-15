@@ -33,8 +33,14 @@ def get_player_soup(team_soup):
     player_soups = team_grades.find_all('li')[1:]
     return team, player_soups
 
+def get_player_name(player_soup):
+    return [span.string for span in player_soup.div.div.find_all('span') if span.get('class',None)==["playerNameIn"]][0]
+
+def get_player_link(player_soup):
+    return [a.get('href') for a in player_soup.find_all('a') if a.get('href', None)!=None][0]
+
 def get_player_stats(player_soup, indices=INDICES):
-    player_name = [span.string for span in player_soup.div.div.find_all('span') if span.get('class',None)==["playerNameIn"]][0]
+    player_name = get_player_name(player_soup)
     role = [span.string for span in player_soup.div.find_all('span') if
             span.get('class',None)==["playerRole", "show-for-small"]][0]
     stats = pd.Series(data=[clean_table_cells(div.string)

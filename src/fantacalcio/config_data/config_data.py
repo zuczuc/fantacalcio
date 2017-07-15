@@ -3,3 +3,4 @@ FOLDER_FANTA_INPUT = {
         }
 
 FANTA_GRADES_FN = "fanta_grades.csv"
+FANTA_LINKS_FN = "player_links.csv"
