@@ -52,3 +52,22 @@ def get_player_stats(player_soup, indices=INDICES):
     po = 1 if len(player_out)>0 else 0
     stats = stats.append(pd.Series(index=['In', 'Out'], data = [pi, po]))
     return player_name, role, stats
+
+def get_attribute_from_text(str):
+    return clean_attributes(str.replace('\r', '').replace('\n', '').replace('\t', '').replace('  ', '').replace(' ', '_')).\
+         split(':')
+
+def clean_attributes(str):
+    return str.replace('_cm', '').replace('_kg', '')
+
+def get_attribute_from_player_soup(player_soup):
+    # Navigate towards the place where information is stored
+    main_container = [sec for sec in player_soup.body.find_all('section') if sec.get('class',None)==['main-container']][0]
+    opener = [sec for sec in main_container.find_all('section') if sec.get('class',None)==['opener']][0]
+    opener2 = [div for div in opener.find_all('div') if div.get('class',None)==['MXXX-section-opener-column']][0]
+    opener3 = [sec for sec in opener2.find_all('section') if sec.get('class',None)==['profilo-giocatore']][0]
+    profile = [div for div in opener3.find_all('div') if div.get('class',None)==["first_half_profilo"]][0]
+    profile_data = [div for div in profile.find_all('div') if div.get('class',None)==["right"]][0]
+    # Get the data and store it in a df
+    data=[get_attribute_from_text(p.get_text()) for p in profile_data.find_all('p')]
+    return pd.DataFrame(data=[[d[1] for d in data]], columns=[d[0] for d in data])
