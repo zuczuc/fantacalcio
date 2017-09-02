@@ -1,12 +1,12 @@
 import os
-import getpass
 import pandas as pd
 
-from fantacalcio.config_data.config_data import FOLDER_FANTA_INPUT, FANTA_GRADES_FN
-from fantacalcio.data.general import canceled_matches_grades_to_nan
+from fantacalcio.config_data.config_data import FOLDER_FANTA_INPUT, FANTA_GRADES_FN, FANTA_REMAP_FN
+from fantacalcio.data.general import canceled_matches_grades_to_nan, remap_players
 
 
 GRADES = canceled_matches_grades_to_nan(pd.read_csv(os.path.join(FOLDER_FANTA_INPUT[os.environ['USERNAME']], FANTA_GRADES_FN)))
+GRADES = remap_players(GRADES, pd.read_csv(os.path.join(FOLDER_FANTA_INPUT[os.environ['USERNAME']], FANTA_REMAP_FN))) 
 
 
 class Player(object):

@@ -12,3 +12,9 @@ def canceled_matches_grades_to_nan(grades):
     grades[grades.index.isin(del_index)].head()
     
     return grades.rename(columns={'FV':'FantaVoto', 'V':'Voto'})
+
+def remap_players(grades, remap):
+    grades = grades.reset_index()
+    grades['Player'] = grades['Player'].map(remap)
+    grades = grades.set_index(['Season', 'Giornata', 'Team', 'Role', 'Player'])[['A', 'AG', 'AM', 'ES', 'FantaVoto', 'G', 'R', 'RS', 'Voto']]
+    return grades
