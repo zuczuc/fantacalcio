@@ -23,7 +23,7 @@ class Player(object):
     @property
     def _data_player(self):
         name = self.name
-        return self.all_player_grades.query("Player == '{n}'".format(n=name))
+        return self.all_player_grades.query("Player == '{n}'".format(n=name)).sort_values(['Season', 'Giornata'])
     
     @property
     def teams(self):
@@ -49,7 +49,7 @@ class Player(object):
     def all_grades(self):
         return self.all_stats[['Voto', 'FantaVoto']]
     
-    def plot(self, propert, *args, **kwargs):
+    def plot(self, attributes, *args, **kwargs):
         title = self.__repr__()[1:-1]
-        lines = getattr(self, propert)
+        lines = self.all_stats[attributes]
         return lines.plot(title=title, *args, **kwargs)
