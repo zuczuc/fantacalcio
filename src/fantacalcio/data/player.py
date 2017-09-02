@@ -6,11 +6,13 @@ from fantacalcio.data.general import canceled_matches_grades_to_nan, remap_playe
 
 
 GRADES = canceled_matches_grades_to_nan(pd.read_csv(os.path.join(FOLDER_FANTA_INPUT[os.environ['USERNAME']], FANTA_GRADES_FN)))
-GRADES = remap_players(GRADES, pd.read_csv(os.path.join(FOLDER_FANTA_INPUT[os.environ['USERNAME']], FANTA_REMAP_FN))) 
+REMAP_PLAYERS = pd.read_csv(os.path.join(FOLDER_FANTA_INPUT[os.environ['USERNAME']], FANTA_REMAP_FN)).set_index('Original')['Final'].to_dict()
+GRADES = remap_players(GRADES, REMAP_PLAYERS)
 
 
 class Player(object):
     ''' Player object'''
+    all_player_grades = GRADES.reset_index()
     
     def __init__(self, name):
         self.name = name
@@ -21,7 +23,7 @@ class Player(object):
     @property
     def _data_player(self):
         name = self.name
-        return GRADES.query('Player == {n}'.format(n=name))
+        return self.all_player_grades.query("Player == '{n}'".format(n=name))
     
     @property
     def teams(self):
@@ -32,20 +34,20 @@ class Player(object):
         return self._data_player.Role.unique().tolist()[0]
     
     @property
-    def _grades(self):
+    def all_stats(self):
         return self._data_player.set_index(['Season', 'Giornata'])[['Voto', 'G', 'A', 'R', 'RS', 'AG', 'AM', 'ES', 'FantaVoto']]
 
     @property
     def grades(self):
-        return self._grades['Voto']
+        return self.all_stats['Voto']
 
     @property
     def fantagrades(self):
-        return self._grades['FantaVoto']
+        return self.all_stats['FantaVoto']
 
     @property
     def all_grades(self):
-        return self._grades[['Voto', 'FantaVoto']]
+        return self.all_stats[['Voto', 'FantaVoto']]
     
     def plot(self, propert, *args, **kwargs):
         title = self.__repr__()[1:-1]
