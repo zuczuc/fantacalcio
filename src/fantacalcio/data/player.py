@@ -6,8 +6,7 @@ from fantacalcio.config_data.config_data import FOLDER_FANTA_INPUT, FANTA_GRADES
 from fantacalcio.data.general import canceled_matches_grades_to_nan
 
 
-GRADES = canceled_matches_grades_to_nan(pd.read_csv(os.path.join(FOLDER_FANTA_INPUT, FANTA_GRADES_FN)))
-OUTPUT_FOLDER = FOLDER_FANTA_INPUT[getpass.getuser()]
+GRADES = canceled_matches_grades_to_nan(pd.read_csv(os.path.join(FOLDER_FANTA_INPUT[os.environ['USERNAME']], FANTA_GRADES_FN)))
 
 
 class Player(object):
