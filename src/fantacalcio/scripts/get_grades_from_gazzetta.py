@@ -2,8 +2,8 @@ import os
 import pandas as pd
 from logging import Logger
 
-from scraping import get_team_soups, get_player_soup, get_player_stats
 from fantacalcio.config_data.config_data import FOLDER_FANTA_INPUT, FANTA_GRADES_FN
+from scraping import get_team_soups, get_player_soup, get_player_stats
 
 log = Logger('get_grades_from_gazzetta')
 log.setLevel('INFO')
@@ -21,7 +21,7 @@ PAGES_GRADES = {'2014':"http://www.gazzetta.it/calcio/fantanews/voti/serie-a-201
 N_GIORNATE = {'2014':38,
             '2015':38,
             '2016':38,
-            '2017':2,
+            '2017':8,
 }
 
 INDICES=['V', 'G', 'A', 'R', 'RS', 'AG', 'AM', 'ES', 'FV']
