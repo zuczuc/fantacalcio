@@ -12,16 +12,21 @@ log.setLevel('INFO')
 # INPUTS
 
 # page_votes = "https://www.fantagazzetta.com/voti-serie-a/2016-17/"
-PAGES_GRADES = {'2014':"http://www.gazzetta.it/calcio/fantanews/voti/serie-a-2014-15/giornata-",
-                '2015':"http://www.gazzetta.it/calcio/fantanews/voti/serie-a-2015-16/giornata-",
-                '2016':"http://www.gazzetta.it/calcio/fantanews/voti/serie-a-2016-17/giornata-",
-                '2017':"http://www.gazzetta.it/calcio/fantanews/voti/serie-a-2017-18/giornata-",
+PAGES_GRADES = {
+    '2014':"http://www.gazzetta.it/calcio/fantanews/voti/serie-a-2014-15/giornata-",
+    '2015':"http://www.gazzetta.it/calcio/fantanews/voti/serie-a-2015-16/giornata-",
+    '2016':"http://www.gazzetta.it/calcio/fantanews/voti/serie-a-2016-17/giornata-",
+    '2017':"http://www.gazzetta.it/calcio/fantanews/voti/serie-a-2017-18/giornata-",
+    '2018':"http://www.gazzetta.it/calcio/fantanews/voti/serie-a-2018-19/giornata-",
 }
 
-N_GIORNATE = {'2014':38,
-            '2015':38,
-            '2016':38,
-            '2017':8,
+N_GIORNATE = {
+    '2014':38,
+    '2015':38,
+    '2016':38,
+    '2017':38,
+    '2018':38,
+#     '2019':1,
 }
 
 INDICES=['V', 'G', 'A', 'R', 'RS', 'AG', 'AM', 'ES', 'FV']

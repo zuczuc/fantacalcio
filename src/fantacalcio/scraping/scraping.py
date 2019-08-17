@@ -23,7 +23,7 @@ def get_team_soups(page_votes, giornata):
     soup2 = [sec for sec in soup1.find_all('section') if sec.get('class', None)==['section-standard-row']][0]
     soup3 = [sec for sec in soup2.find_all('div') if sec.get('class', None)==["MXXX-central-articles-main-column"]][0]
     soup4 = [sec for sec in soup3.find_all('div') if
-                   sec.get('class', None)==['magicDayList', 'listView', 'magicDayListChkDay']][0]
+        sec.get('class', None)==['magicDayList', 'listView', 'magicDayListChkDay']][0]
     return [sec for sec in soup4.find_all('div') if sec.get('class', None)==['singleRound']]
 
 def get_player_soup(team_soup):
@@ -53,11 +53,11 @@ def get_player_stats(player_soup, indices=INDICES):
     stats = stats.append(pd.Series(index=['In', 'Out'], data = [pi, po]))
     return player_name, role, stats
 
-def get_attribute_from_text(str):
-    return clean_attributes(str.replace('\r', '').replace('\n', '').replace('\t', '').replace('  ', '').replace(' ', '_')).\
+def get_attribute_from_text(string):
+    return clean_attributes(string.replace('\r', '').replace('\n', '').replace('\t', '').replace('  ', '').replace(' ', '_')).\
          split(':')
 
-def clean_attributes(str):
+def clean_attributes(string):
     return str.replace('_cm', '').replace('_kg', '')
 
 def get_attribute_from_player_soup(player_soup):
