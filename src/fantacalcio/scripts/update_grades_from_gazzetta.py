@@ -101,6 +101,7 @@ PAGES_GRADES = {
     '2016':"http://www.gazzetta.it/calcio/fantanews/voti/serie-a-2016-17/giornata-",
     '2017':"http://www.gazzetta.it/calcio/fantanews/voti/serie-a-2017-18/giornata-",
     '2018':"http://www.gazzetta.it/calcio/fantanews/voti/serie-a-2018-19/giornata-",
+    '2019':"http://www.gazzetta.it/calcio/fantanews/voti/serie-a-2019-20/giornata-",
 }
 
 N_GIORNATE = {
