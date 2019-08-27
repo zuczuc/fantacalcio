@@ -1,0 +1,113 @@
+Calciatore,Ruolo,Squadra,Costo,Squadra
+SKORUPSKI,P,Bol,1,Us Schiappe
+OSPINA,P,Nap,9,Us Schiappe
+ASAMOAH,D,Int,5,Us Schiappe
+KARSDORP,D,Rom,1,Us Schiappe
+LUIZ FELIPE,D,Laz,1,Us Schiappe
+DOUGLAS COSTA,C,Juv,39,Us Schiappe
+ICARDI,A,Int,97,Us Schiappe
+KEITA B,A,Int,12,Us Schiappe
+INSIGNE,A,Nap,3,Us Schiappe
+ZAPATA D,A,Ata,15,Us Schiappe
+SCHICK,A,Rom,2,Us Schiappe
+DONNARUMMA G,P,Mil,6,Piede A Martello Fc 
+SZCZESNY,P,Juv,5,Piede A Martello Fc 
+MASIELLO A,D,Ata,6,Piede A Martello Fc 
+ACERBI,D,Laz,3,Piede A Martello Fc 
+SKRINIAR,D,Int,10,Piede A Martello Fc 
+CALDARA,D,Mil,9,Piede A Martello Fc 
+FAZIO,D,Rom,4,Piede A Martello Fc 
+CANCELO,D,Juv,7,Piede A Martello Fc 
+ZIELINSKI,C,Nap,2,Piede A Martello Fc 
+KHEDIRA,C,Juv,9,Piede A Martello Fc 
+PAROLO,C,Laz,3,Piede A Martello Fc 
+VERDI,C,Nap,3,Piede A Martello Fc 
+HAMSIK,C,Nap,4,Piede A Martello Fc 
+CRISTANTE,C,Rom,13,Piede A Martello Fc 
+FREULER,C,Ata,17,Piede A Martello Fc 
+PAVOLETTI,A,Cag,4,Piede A Martello Fc 
+MANDZUKIC,A,Juv,1,Piede A Martello Fc 
+SIMEONE,A,Fio,34,Piede A Martello Fc 
+KARNEZIS,P,Nap,3,Higuana Fighters Club 
+MERET,P,Nap,1,Higuana Fighters Club 
+BARZAGLI,D,Juv,1,Higuana Fighters Club 
+ALBIOL,D,Nap,1,Higuana Fighters Club 
+RODRIGUEZ R,D,Mil,1,Higuana Fighters Club 
+PERISIC,C,Int,39,Higuana Fighters Club 
+KESSIE',C,Mil,1,Higuana Fighters Club 
+PASALIC,C,Ata,1,Higuana Fighters Club 
+INGLESE,A,Par,1,Higuana Fighters Club 
+MERTENS,A,Nap,61,Higuana Fighters Club 
+DZEKO,A,Rom,96,Higuana Fighters Club 
+PJACA,A,Fio,2,Higuana Fighters Club 
+SIRIGU,P,Tor,3,Racing Cope 
+MUSSO,P,Udi,1,Racing Cope 
+SILVESTRE,D,Emp,1,Racing Cope 
+KOLAROV,D,Rom,12,Racing Cope 
+N'KOULOU,D,Tor,3,Racing Cope 
+PEZZELLA GER,D,Fio,2,Racing Cope 
+CRISCITO,D,Gen,5,Racing Cope 
+SAPONARA,C,Sam,1,Racing Cope 
+LAXALT,C,Mil,1,Racing Cope 
+MILINKOVIC-SAVIC,C,Laz,41,Racing Cope 
+DE PAUL,C,Udi,5,Racing Cope 
+PRAET,C,Sam,2,Racing Cope 
+CALHANOGLU,C,Mil,11,Racing Cope 
+VERETOUT,C,Fio,3,Racing Cope 
+BELOTTI,A,Tor,58,Racing Cope 
+MARTINEZ L,A,Int,23,Racing Cope 
+PUSSETTO,A,Udi,1,Racing Cope 
+RIGONI E,A,Ata,2,Racing Cope 
+HANDANOVIC,P,Int,21,Patron
+GOLLINI,P,Ata,1,Patron
+MARIO RUI,D,Nap,2,Patron
+GHOULAM,D,Nap,4,Patron
+KOULIBALY,D,Nap,14,Patron
+ROMAGNOLI A,D,Mil,7,Patron
+MURRU,D,Sam,1,Patron
+ILICIC,C,Ata,14,Patron
+ALLAN,C,Nap,4,Patron
+GIACCHERINI,C,Chi,4,Patron
+LASAGNA,A,Udi,23,Patron
+BERARDI,A,Sas,1,Patron
+CRISTIANO RONALDO,A,Juv,17,Patron
+OLSEN,P,Rom,8,Opti Poba Banana FC
+CONTI,D,Mil,1,Opti Poba Banana FC
+BONUCCI,D,Juv,3,Opti Poba Banana FC
+DE VRIJ,D,Int,3,Opti Poba Banana FC
+BROZOVIC,C,Int,8,Opti Poba Banana FC
+BOATENG,C,Sas,15,Opti Poba Banana FC
+MATUIDI,C,Juv,3,Opti Poba Banana FC
+PASTORE,C,Rom,11,Opti Poba Banana FC
+IMMOBILE,A,Laz,111,Opti Poba Banana FC
+MILIK,A,Nap,21,Opti Poba Banana FC
+UNDER,A,Rom,6,Opti Poba Banana FC
+PIATEK,A,Gen,4,Opti Poba Banana FC
+REINA,P,Mil,1,Bradipo Twist
+LAFONT,P,Fio,8,Bradipo Twist
+CHIELLINI,D,Juv,2,Bradipo Twist
+FLORENZI,D,Rom,5,Bradipo Twist
+ALEX SANDRO,D,Juv,2,Bradipo Twist
+BONAVENTURA,C,Mil,1,Bradipo Twist
+PJANIC,C,Juv,13,Bradipo Twist
+JANKTO,C,Sam,3,Bradipo Twist
+LUIS ALBERTO,C,Laz,28,Bradipo Twist
+MARUSIC,C,Laz,3,Bradipo Twist
+HIGUAIN,A,Mil,114,Bradipo Twist
+IAGO FALQUE,A,Tor,6,Bradipo Twist
+SORRENTINO,P,Chi,2,Atletico Poder Negro 
+STRAKOSHA,P,Laz,3,Atletico Poder Negro 
+CACCIATORE,D,Chi,2,Atletico Poder Negro 
+MIRANDA,D,Int,1,Atletico Poder Negro 
+DE SILVESTRI,D,Tor,1,Atletico Poder Negro 
+BERESZYNSKI,D,Sam,1,Atletico Poder Negro 
+PALOMINO,D,Ata,1,Atletico Poder Negro 
+LISANDRO LOPEZ,D,Gen,1,Atletico Poder Negro 
+CASTRO,C,Cag,3,Atletico Poder Negro 
+NAINGGOLAN,C,Int,1,Atletico Poder Negro 
+CHIESA,C,Fio,27,Atletico Poder Negro 
+CICIRETTI,C,Par,3,Atletico Poder Negro 
+LAZZARI M,C,SPA,1,Atletico Poder Negro 
+GOMEZ A,A,Ata,27,Atletico Poder Negro 
+DYBALA,A,Juv,120,Atletico Poder Negro 
+GERVINHO,A,Par,1,Atletico Poder Negro 
